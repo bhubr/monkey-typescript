@@ -5,7 +5,7 @@ import { Lexer } from '../src/lexer';
 describe('lexer', () => {
 
   it('produces tokens from simple input', () => {
-    const input = '! +-*/ () {} ; let function return ident';
+    const input = '! +-*/ () {} ,; let function return ident';
     const lexer = new Lexer(input);
     const tokens = lexer.getTokens();
     expect(tokens).to.deep.equal([
@@ -18,6 +18,7 @@ describe('lexer', () => {
       { type: TokenType.RPAREN, field: ')' },
       { type: TokenType.LBRACE, field: '{' },
       { type: TokenType.RBRACE, field: '}' },
+      { type: TokenType.COMMA, field: ',' },
       { type: TokenType.SEMI, field: ';' },
       { type: TokenType.LET, field: 'let' },
       { type: TokenType.FUNCTION, field: 'function' },

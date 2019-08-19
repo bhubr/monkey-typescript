@@ -94,6 +94,9 @@ export class Lexer {
       case '}':
         tok = this.newToken(TokenType.RBRACE, '}');
         break;
+      case ',':
+        tok = this.newToken(TokenType.COMMA, ',');
+        break;
       case ';':
         tok = this.newToken(TokenType.SEMI, ';');
         break;

@@ -9,6 +9,7 @@ export enum TokenType {
   RBRACE = "}",
   LPAREN = "(",
   RPAREN = ")",
+  COMMA = ",",
   SEMI = ";",
   EOF = "EOF",
   ILLEGAL = "ILLEGAL",
